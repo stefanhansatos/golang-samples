@@ -107,5 +107,5 @@ func main() {
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
 	}
-	log.Printf("Greeting from the server: %s", r.Message)
+	log.Printf("Greeting from the developers: %s", r.Message)
 }
