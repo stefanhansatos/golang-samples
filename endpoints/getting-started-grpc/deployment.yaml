@@ -43,12 +43,12 @@ spec:
         args: [
           "-P", "9000",
           "-a", "grpc://127.0.0.1:50051",
-          "-s", "hellogrpc.endpoints.<YOUR_PROJECT_ID>.cloud.goog", # replace <YOUR_PROJECT_ID>
+          "-s", "hellogrpc.endpoints.aqueous-cargo-242610.cloud.goog", # replace <YOUR_PROJECT_ID>
           "--rollout_strategy", "managed",
         ]
         ports:
           - containerPort: 9000
       - name: echo
-        image: gcr.io/<YOUR_PROJECT_ID>/go-grpc-hello:1.0 # replace <YOUR_PROJECT_ID>
+        image: gcr.io/aqueous-cargo-242610/go-grpc-hello:1.0 # replace <YOUR_PROJECT_ID>
         ports:
           - containerPort: 50051
