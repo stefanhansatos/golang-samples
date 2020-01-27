@@ -68,7 +68,7 @@ func main() {
 	c := pb.NewGreeterClient(conn)
 
 	if *keyfile != "" {
-		log.Printf("Authenticating using Google service account key in %s", *keyfile)
+		//log.Printf("Authenticating using Google service account key in %s", *keyfile)
 		keyBytes, err := ioutil.ReadFile(*keyfile)
 		if err != nil {
 			log.Fatalf("Unable to read service account key file %s: %v", *keyfile, err)
@@ -90,11 +90,11 @@ func main() {
 
 	ctx := context.Background()
 	if *key != "" {
-		log.Printf("Using API key: %s", *key)
+		//log.Printf("Using API key: %s", *key)
 		ctx = metadata.AppendToOutgoingContext(ctx, "x-api-key", *key)
 	}
 	if *token != "" {
-		log.Printf("Using authentication token: %s", *token)
+		//log.Printf("Using authentication token: %s", *token)
 		ctx = metadata.AppendToOutgoingContext(ctx, "Authorization", fmt.Sprintf("Bearer %s", *token))
 	}
 
