@@ -8,3 +8,6 @@ steps:
       - 'CLOUDSDK_COMPUTE_ZONE=$_CLOUDSDK_COMPUTE_ZONE'
       - 'CLOUDSDK_CONTAINER_CLUSTER=$_CLOUDSDK_CONTAINER_CLUSTER'
 
+  - name: 'gcr.io/cloud-builders/go'
+    args: ['run', '/workspace/endpoints/getting-started-grpc/client/main.go', '--api-key=AIzaSyCd81cfAlsqpUxLS8NB89dKI25t54NGC9s', '--addr=34.76.18.187:80', 'Test successful!']
+
