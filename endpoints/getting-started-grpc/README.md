@@ -3,7 +3,10 @@
 This sample demonstrates how to use Google Cloud Endpoints using Go and gRPC.
 It will be used as base for doing creative learning style. by Goland 
 
+```bash
 server[[:print:]]*
+```
+
 
 ## Test the code locally (optional)
 
