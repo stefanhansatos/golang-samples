@@ -3,7 +3,7 @@ steps:
  #   args: ['builds', 'submit', '--tag', 'gcr.io/aqueous-cargo-242610/go-grpc-hello', '/workspace/endpoints/getting-started-grpc']
 
   - name: 'gcr.io/cloud-builders/kubectl'
-    args: ['apply', '-f', 'deployment.yaml']
+    args: ['apply', '-f', '/workspace/endpoints/getting-started-grpc/deployment.yaml']
     env:
  #     - 'CLOUDSDK_COMPUTE_REGION=$_CLOUDSDK_COMPUTE_REGION'
       - 'CLOUDSDK_COMPUTE_ZONE=$_CLOUDSDK_COMPUTE_ZONE'
