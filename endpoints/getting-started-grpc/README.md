@@ -8,6 +8,11 @@ server[[:print:]]*
 ```
 
 
+CLOUDSDK_COMPUTE_REGION=<cluster region> (regional clusters)
+CLOUDSDK_COMPUTE_ZONE=<cluster zone>
+CLOUDSDK_CONTAINER_CLUSTER=<cluster name>
+
+
 ## Test the code locally (optional)
 
 Run the backend using `go run`:
