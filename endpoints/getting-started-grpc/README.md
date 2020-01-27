@@ -1,7 +1,7 @@
 # Google Cloud Endpoints Sample for Go using gRPC
 
 This sample demonstrates how to use Google Cloud Endpoints using Go and gRPC.
-It will be used as base for doing creative learning style. 2
+It will be used as base for doing creative learning style. 3
 
 ## Test the code locally (optional)
 
