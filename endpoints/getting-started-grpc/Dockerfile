@@ -8,7 +8,7 @@ COPY . /go/src/app
 # Don't do this in production! Use vendoring instead.
 #RUN go get -v app/server
 
-RUN which sh bash
+RUN which sh
 
 ENTRYPOINT ["/bin/sh"]
 
