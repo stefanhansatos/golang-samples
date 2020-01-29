@@ -9,9 +9,9 @@ ENV GO111MODULE=on
 
 RUN go mod init app/server
 
-RUN go mod vendor
+#RUN go mod vendor
 
-RUN go install /go/src/app/server
+#RUN go install /go/src/app/server
 
 
 # Don't do this in production! Use vendoring instead.
