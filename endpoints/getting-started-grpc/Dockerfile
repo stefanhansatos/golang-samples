@@ -25,7 +25,7 @@ RUN go mod init
 
 #ENTRYPOINT ["/go/bin/server"]
 
-#RUN which sh
+# RUN which sh
 
 ENTRYPOINT ["/bin/sh"]
 
