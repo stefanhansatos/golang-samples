@@ -7,7 +7,9 @@ COPY . /go/src/app
 
 ENV GO111MODULE=on
 
-RUN go mod init app/server
+RUN pwd
+
+#RUN go mod init app/server
 
 #RUN go mod vendor
 
@@ -15,13 +17,11 @@ RUN go mod init app/server
 
 
 # Don't do this in production! Use vendoring instead.
-#RUN go get -v app/server
+RUN go get -v app/server
 
-#ENTRYPOINT ["/go/bin/server"]
+RUN go install app/server
 
-# RUN which sh
-
-ENTRYPOINT ["/bin/sh"]
+ENTRYPOINT ["/go/bin/server"]
 
 
 ##RUN go env
