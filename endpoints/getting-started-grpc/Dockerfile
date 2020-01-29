@@ -7,7 +7,7 @@ COPY . /go/src/app
 
 ENV GO111MODULE=on
 
-RUN go mod init /go/src/app/server
+RUN go mod init app/server
 
 RUN go mod vendor
 
