@@ -9,17 +9,17 @@ COPY . /go/src/app
 #RUN go get -v app/server
 
 
-RUN go env
+#RUN go env
 
 ENV GO111MODULE=on
 
-ENV GOPATH=/tmp
+#ENV GOPATH=/tmp
 
 RUN go env
 
 RUN go mod init app/server
 
-#RUN go mod vendor
+RUN go mod vendor
 
 RUN go install app/server
 
