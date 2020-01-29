@@ -49,6 +49,6 @@ spec:
         ports:
           - containerPort: 9000
       - name: echo
-        image: gcr.io/aqueous-cargo-242610/go-grpc-hello # replace <YOUR_PROJECT_ID>kkk
+        image: gcr.io/aqueous-cargo-242610/go-grpc-hello:latest # replace <YOUR_PROJECT_ID>kkk
         ports:
           - containerPort: 50051
