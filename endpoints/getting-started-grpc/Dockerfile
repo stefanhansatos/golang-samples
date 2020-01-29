@@ -1,9 +1,3 @@
-
-ENV GO111MODULE=on
-
-RUN pwd
-
-
 FROM golang:alpine
 
 RUN apk update \
