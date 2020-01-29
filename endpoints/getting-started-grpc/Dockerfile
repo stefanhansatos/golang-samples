@@ -19,7 +19,7 @@ RUN go env
 
 RUN go mod init app/server
 
-#RUN go mod vendor
+#   RUN go mod vendor
 
 RUN go install app/server
 
