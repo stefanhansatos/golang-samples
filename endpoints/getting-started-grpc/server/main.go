@@ -41,7 +41,7 @@ import (
 
 	"google.golang.org/grpc"
 	//pb "google.golang.org/grpc/examples/helloworld/helloworld"
-	pb "github.com/stefanhansatos/golang-samples/endpoints/getting-started-grpc/helloworld"
+	pb "../helloworld"
 	"google.golang.org/grpc/reflection"
 )
 

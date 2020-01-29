@@ -5,12 +5,21 @@ RUN apk update \
 
 COPY . /go/src/app
 
-# Don't do this in production! Use vendoring instead.
-RUN go get -v app/server
+#ENV GO111MODULE=on
+#
+#RUN cd /go/src/app/server && rm go.mod && go mod init && go mod vendor && go install
+#
+## Don't do this in production! Use vendoring instead.
+#RUN go get -v app/server
+#
+#RUN go install app/server
+#
+#ENTRYPOINT ["/go/bin/server"]
+#
 
-RUN go install app/server
 
-ENTRYPOINT ["/go/bin/server"]
+
+
 
 #RUN go mod init app/server
 

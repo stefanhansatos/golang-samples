@@ -10,6 +10,7 @@ steps:
 
   - name: 'gcr.io/cloud-builders/go'
     args: ['go', 'env']
+    env: ['GOPATH=/tmp']
 
 #  - name: 'gcr.io/cloud-builders/go'
 #    args: ['mod', 'init', '/workspace/endpoints/getting-started-grpc']
