@@ -6,7 +6,11 @@ RUN apk update \
 COPY . /go/src/app
 
 # Don't do this in production! Use vendoring instead.
-RUN go get -v app/server
+#RUN go get -v app/server
+
+RUN go mod init app/server
+
+RUN go mod vendor
 
 RUN go install app/server
 
