@@ -5,20 +5,14 @@ RUN apk update \
 
 COPY . /go/src/app
 
-RUN pwd
-
-RUN cd /go/src/app/server
-
-RUN pwd
-
 ENV GO111MODULE=on
 
-RUN go mod init
+RUN go mod init /go/src/app/server
 
-#RUN go mod vendor
-#
-#RUN go install
-#
+RUN go mod vendor
+
+RUN go install /go/src/app/server
+
 
 # Don't do this in production! Use vendoring instead.
 #RUN go get -v app/server
