@@ -7,7 +7,7 @@ COPY . /go/src/app
 
 ENV GO111MODULE=on
 
-RUN go build -o /go/bin/server github.com/stefanhansatos/golang-samples/endpoints/getting-started-grpc/server/...
+RUN go build -o /go/bin/server /go/src/app/server/...
 #
 #RUN cd /go/src/app/server && rm go.mod && go mod init && go mod vendor && go install
 #
