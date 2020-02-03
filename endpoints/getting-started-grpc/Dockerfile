@@ -11,7 +11,7 @@ RUN pwd && ls -l
 
 ENV GO111MODULE=on
 
-#RUN go build -o /go/bin/server /go/src/app/server/main.go
+RUN /go/bin build -o /go/bin/server /go/src/app/server/main.go
 #
 #RUN cd /go/src/app/server && rm go.mod && go mod init && go mod vendor && go install
 #
@@ -20,7 +20,7 @@ ENV GO111MODULE=on
 
 #RUN go install app/server
 
-#ENTRYPOINT ["/go/bin/server"]
+ENTRYPOINT ["/go/bin/server"]
 
 
 
