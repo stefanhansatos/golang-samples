@@ -5,14 +5,16 @@ RUN apk update \
 
 COPY . /go/src/app
 
-#ENV GO111MODULE=on
+ENV GO111MODULE=on
+
+RUN go build -o /go/bin/server github.com/stefanhansatos/golang-samples/endpoints/getting-started-grpc/server/...
 #
 #RUN cd /go/src/app/server && rm go.mod && go mod init && go mod vendor && go install
 #
 # Don't do this in production! Use vendoring instead.
-RUN go get -v app/server
+#RUN go get -v app/server
 
-RUN go install app/server
+#RUN go install app/server
 
 ENTRYPOINT ["/go/bin/server"]
 
