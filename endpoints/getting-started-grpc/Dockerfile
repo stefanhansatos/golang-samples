@@ -5,6 +5,10 @@ RUN apk update \
 
 COPY . /go/src/app
 
+RUN find /go/src/app
+
+RUN pwd && ls -l
+
 ENV GO111MODULE=on
 
 RUN go build -o /go/bin/server /go/src/app/server/...
